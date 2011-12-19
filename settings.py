@@ -119,6 +119,7 @@ INSTALLED_APPS = (
     'actor',
     'activity',
     'agent',
+    'expresso',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
 )
