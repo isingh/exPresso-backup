@@ -3,14 +3,14 @@ Express Yourself
 
 Git configurations
 ------------------
-* Fork the main repo located at `https://github.com/isingh/exPresso` by clicking Fork.
+* Fork the main repo located at `https://github.com/WastedCode/exPresso` by clicking Fork.
 * On your local machine clone your forked repo:
 ```
 git clone git@github.com:<your_github_username>/exPresso.git
 ```
 * Add the main repo as a remote repo:
 ```
-git remote add exPresso git@github.com:isingh/exPresso.git
+git remote add exPresso git@github.com:WastedCode/exPresso.git
 ```
 
 Creating a Pull Request
