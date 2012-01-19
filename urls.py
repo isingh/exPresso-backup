@@ -5,7 +5,7 @@ from django.conf.urls.defaults import patterns, include, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^index', 'exPresso.expresso_object.views.index'),
+    url(r'^index', 'exPresso.handlers.index.index'),
     # Examples:
     # url(r'^$', 'exPresso.views.home', name='home'),
     # url(r'^exPresso/', include('exPresso.foo.urls')),

@@ -1,7 +1,7 @@
 import hashlib
 
-from expresso.common.expresso_settings import EXPRESSO_PASSWORD_HASH
-from expresso.utils.net_utils import get_query_param
+from common.expresso_settings import EXPRESSO_PASSWORD_HASH
+from utils.net_utils import get_query_param
 
 def authorized_get_request(request_handler):
   def _authorized_get_request(*args, **kwargs):
