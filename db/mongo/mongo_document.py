@@ -36,6 +36,9 @@ class MongoDocument(Document):
 
   def save(self):
     self._attribute_values.update(self._new_attributes_values)
+    for attribute_name, attribute in self._attribute_values.iteritems():
+      if not attribute.is_valid:
+        raise Exception("Invalid value, cannot save")
     if self._id is not None:
       self._collection.save(self.document_to_write)
     else:

@@ -1,10 +1,11 @@
 import re
-
 from db.mongo.fields import BaseField
 
 class StringField(BaseField):
   """String values that can be written to Mongo.
   """
+  _object_type = str
+
   def __init__(self, min_length=None, max_length=None, *args, **kwargs):
     super(StringField, self).__init__(*args, **kwargs)
     self._max_length = max_length
@@ -15,8 +16,10 @@ class StringField(BaseField):
       min_length = 0
     self._min_length = min_length
 
-
   def validate(self, new_value):
+    if not new_value:
+      return True
+
     length = len(new_value)
     if self._max_length and length > self._max_length:
       raise Exception("String exceeds maximum length of %s" %
@@ -37,3 +40,4 @@ class EmailField(StringField):
     if self._email_regex.match(new_value):
       return True
     raise Exception("Invalid email address")
+
